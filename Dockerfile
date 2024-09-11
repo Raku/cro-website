@@ -4,7 +4,7 @@ FROM docker.io/rakudo-star:latest
 ARG quay_expiration=never
 LABEL quay.expires-after=${quay_expiration}
 
-RUN apt-get update -y && \
+RUN apt-get update -y && apt-get upgrade -y && \
     apt-get install -y uuid-dev libpq-dev libssl-dev unzip build-essential && \
     apt-get purge -y
 
