@@ -20,6 +20,8 @@ sub routes() is export {
     template-location 'templates';
 
     route {
+        http 'HEAD', -> {
+        }
         get -> {
             template 'index.crotmp';
         }
